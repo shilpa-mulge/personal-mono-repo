@@ -2,7 +2,7 @@ import React from 'react'
 
 export function MyImage() {
   return (
-    <div><img src='' alt='' /></div>
+    <div> <img src='' alt='' /></div>
   )
 }
 
