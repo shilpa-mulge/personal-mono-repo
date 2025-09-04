@@ -1,0 +1,1 @@
+{"root":["./tailwind.config.ts","./vite.config.ts","./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/contenteditor.tsx","./src/components/contentfuldashboard.tsx","./src/components/dynamiccomponenteditor.tsx","./src/lib/contentful.ts","./src/lib/sync.ts"],"version":"5.8.3"}

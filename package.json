@@ -1,0 +1,31 @@
+{
+  "name": "mono-repo-test",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "predev": "node scripts/predev.js",
+    "dev": "turbo run dev --parallel",
+    "postdev": "node scripts/postdev.js",
+    "build": "turbo run build",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "lint": "turbo run lint",
+    "start": "turbo run start --filter=editor"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwind-animate": "^0.2.10",
+    "tailwindcss": "^4.1.12",
+    "turbo": "^2.5.6",
+    "typescript": "^5.9.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.12"
+  }
+}
