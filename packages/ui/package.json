@@ -1,0 +1,55 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "private": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    "./globals.css": "./globals.css",
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    }
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-dropdown-menu": "^2.1.2",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-select": "^2.1.2",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-toast": "^1.2.2",
+    "@tabler/icons-react": "^3.34.1",
+    "@tailwindcss/postcss": "^4.1.12",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cobe": "^0.6.4",
+    "lucide-react": "^0.540.0",
+    "motion": "^12.23.12",
+    "postcss": "^8.5.6",
+    "simplex-noise": "^4.0.3",
+    "tailwind-config": "workspace:*",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.12",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}

@@ -341,18 +341,18 @@ const PreviewItem: React.FC<PreviewItemProps> = ({ item, index, moveItem, onUpda
   const renderPreviewContent = () => {
     switch (item.type) {
       case 'hero':
-        return (
-        <Hero>
+        return (<>
+          <Hero />
               <PreviewEditableItem item={item} onUpdate={onUpdate} /> 
-          </Hero>
+        </>
         );
       
       case 'card':
-        return (
-          <Card>
+        return (<>
+          <Card />
               <PreviewEditableItem item={item} onUpdate={onUpdate} />
            
-          </Card>
+        </>
         );
       case 'image':
         return (
