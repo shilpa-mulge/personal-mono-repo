@@ -11,6 +11,12 @@ interface AppProps {
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
 const App: React.FC<AppProps> = ({ sdk }) => {
+
+  if (!sdk) {
+    return <>
+      <ContentfulDashboard />
+    </>;
+  }
   // Detect where app is running and render appropriate component
   if (sdk.location.is(locations.LOCATION_APP_CONFIG)) {
     return (
