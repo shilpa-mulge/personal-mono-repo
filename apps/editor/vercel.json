@@ -1,0 +1,11 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "ALLOW-FROM https://app.contentful.com" },
+        { "key": "Content-Security-Policy", "value": "frame-ancestors https://app.contentful.com" }
+      ]
+    }
+  ]
+}
