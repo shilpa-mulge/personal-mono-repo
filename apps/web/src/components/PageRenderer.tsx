@@ -2,7 +2,7 @@ import React from "react";
 import { getPageBySlug } from "../lib/contentful"; // adjust path as needed
 
 // import your UI components from packages/ui
-import { Hero,Card,Button,MyImage } from "ui";
+import { Hero, Card, Button, MyImage, ComponentsRouter, PageRouter } from "ui";
 
 
 // Types
@@ -29,13 +29,7 @@ type Page = {
   data: PageData;
 };
 
-// 🔧 Map types to components
-const componentMap: Record<string, React.ComponentType<any>> = {
-   hero: Hero,
-  card: Card,
-  button: Button,
-  image: MyImage,
-};
+
 
 // Async server component (Next.js 13+/14) or just React.FC
 export default async function PageRenderer({ slug }: { slug: string }) {
@@ -54,24 +48,8 @@ console.log("configconfigconfigconfigconfigconfig",config?.data,data.data)
       </header>
 
       <main className="p-6 space-y-6">
-        {data?.data?.data?.map((block, i) => {
-             const type = Object.keys(block)[0];   // "hero" or "card"
-                const Comp = componentMap[type];
-    if (!Comp) {
-      return (
-        <div
-          key={i}
-          className="p-4 border rounded bg-red-50 text-red-700"
-        >
-          Unknown component type: {type}
-        </div>
-      );
-    }
-
-    // Merge data and config as props (you can choose structure)
-    return <Comp key={i} {...block[type].data} config={block[type].config} />;
-        })}
+        <PageRouter config={config} data={data} />
       </main>
-    </div>
+    </div> 
   );
 }

@@ -36,7 +36,7 @@ export async function fetchAllEntries() {
   }));
   console.log("datasdatasdatasdatasdatas", configs, datas, configMap, dataMap)
   const pages = configMap
-    .filter((cfg) => cfg.type === "Page" && cfg.data?.data?.slug)
+    .filter((cfg) => cfg.type === "Page" && cfg.data?.slug)
     .map((cfg) => {
       const pageData = dataMap.find((d) => d.configId === cfg.id);
       return { config: cfg, data: pageData };
@@ -48,5 +48,5 @@ export async function fetchAllEntries() {
 
 export async function getPageBySlug(slug: string) {
   const pages = await fetchAllEntries();
-  return pages.find((p) => p.config.data.data.slug === slug);
+  return pages.find((p) => p.config.data.slug === slug);
 }
