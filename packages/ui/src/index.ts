@@ -23,6 +23,12 @@ export {
 // Utility functions
 export { cn } from "./lib/utils"
 
+// Page Router
+export { PageRouter } from "./lib/PageRouter"
+
+//Component Router
+export { ComponentsRouter } from "./lib/ComponetRouter"
+
 // Demo component
 export {  Demo } from "./components/demo"
 export {  SidebarDemo } from "./components/sidebar-demo"
