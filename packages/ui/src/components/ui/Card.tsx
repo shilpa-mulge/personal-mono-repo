@@ -1,8 +1,8 @@
 import React from 'react'
 
-export function Card() {
+export function Card(props) {
   return (
-    <div>The Card</div>
+    <h1>{props.heading}</h1>
   )
 }
 

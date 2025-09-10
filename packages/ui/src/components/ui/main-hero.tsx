@@ -1,8 +1,8 @@
 import React from 'react'
 
-export function Hero() {
+export function Hero(props) {
   return (<div className=''>
-    <h1>I am the Hero section</h1>
+    <h1>{props.heading}</h1>
     </div>
   )
 }

@@ -45,6 +45,9 @@ importers:
       '@contentful/rich-text-types':
         specifier: ^17.1.0
         version: 17.1.0
+      contentful:
+        specifier: ^11.7.15
+        version: 11.7.15
       contentful-app-sdk:
         specifier: ^3.31.0
         version: 3.31.0
